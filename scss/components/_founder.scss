@@ -1,0 +1,86 @@
+@use '../global/typography' as t;
+@use '../utils/' as u;
+
+.founder {
+    position: relative;
+    padding: 11.2rem 2rem 0rem 2rem;
+
+    @include u.breakpoint(medium) {
+        padding: 11.2rem 4.4rem 0rem 4.4rem;
+    }
+
+    &__image {
+        margin-bottom: -4.8rem;
+        transition: all 0.3s ease-out;
+
+        @include u.breakpoint(medium) {
+            max-width: 28rem;
+            margin-bottom: -10.4rem;
+        }
+
+        @include u.breakpoint(large) {
+            max-width: 47.7rem;
+            margin-bottom: -30.9rem;
+        }
+    }
+
+    &__content-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include u.breakpoint(medium) {
+            grid-template-columns: repeat(8, 1fr);
+            gap: 2.4rem;
+        }
+
+        @include u.breakpoint(large) {
+            grid-template-columns: repeat(12, 1fr);
+            gap: 3.2rem;
+        }
+    }
+
+    &__content {
+        grid-column: 1 / 5;
+        background-color: var(--slate-900);
+        padding: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem;
+
+        @include u.breakpoint(medium) {
+            grid-column: 3 / 9;
+            padding: 4.8rem;
+            align-items: flex-start;
+        }
+
+        @include u.breakpoint(large) {
+            grid-column: 5 / 13;
+        }
+    }
+
+    &__title {
+        @include t.text-preset-2();
+        color: var(--white);
+        text-align: center;
+
+        @include u.breakpoint(medium) {
+            text-align: left;
+        }
+    }
+
+    &__description {
+        @include t.text-preset-4();
+        color: white;
+        text-align: center;
+
+        @include u.breakpoint(medium) {
+            text-align: justify;
+        }
+    }
+
+    &__bg-pattern {
+        display: none;
+    }
+}

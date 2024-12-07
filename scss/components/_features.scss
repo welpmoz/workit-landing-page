@@ -1,0 +1,79 @@
+@use '../global/typography' as t;
+@use '../utils/' as u;
+
+.features {
+    margin-top: 8rem;
+    padding: 6.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    list-style: none;
+    list-style-position: inside;
+
+    @include u.breakpoint(medium) {
+        margin-top: 13.6rem;
+        padding: 5.6rem 4.4rem 4.4rem 4.4rem;
+        gap: 3.2rem;
+    }
+
+    @include u.breakpoint(large) {
+        margin-top: 16.8rem;
+        padding: 8.8rem 8rem 14.4rem 8rem;
+        flex-direction: row;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+        counter-increment: item;
+
+        @include u.breakpoint(medium) {
+            flex-direction: row;
+            gap: 5.6rem;
+        }
+
+        @include u.breakpoint(large) {
+            flex-direction: column;
+        }
+    }
+
+    &__item::before {
+        content: counter(item);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.7rem;
+        height: 4.7rem;
+        border-radius: 50%;
+        border: 0.1rem solid var(--slate-500);
+        @include t.text-preset-6();
+    }
+
+    &__item-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        text-align: center;
+
+        @include u.breakpoint(medium) {
+            text-align: left;
+            gap: 2.8rem
+        }
+
+        @include u.breakpoint(large) {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        @include t.text-preset-3();
+        color: var(--slate-900);
+    }
+
+    &__description {
+        @include t.text-preset-4();
+        color: var(--slate-900);
+    }
+}

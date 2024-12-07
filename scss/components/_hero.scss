@@ -1,0 +1,104 @@
+@use '../global/typography' as t;
+@use '../utils/' as u;
+
+.hero__content {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--slate-900);
+    padding: 5.6rem 2rem 14.4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+    @include u.breakpoint(large) {
+        padding: 5.6rem 8rem 29.6rem 8rem;
+    }
+}
+
+.hero__curve {
+    position: relative;
+    background-color: var(--slate-900);
+    display: flex;
+}
+
+.hero__title {
+    @include t.text-preset-1();
+    color: var(--white);
+    text-align: center;
+    max-width: 11ch;
+}
+
+.hero__title--highlighted {
+    border-bottom: 0.3rem solid var(--green);
+}
+
+.hero__bg-pattern {
+    display: none;
+
+    @include u.breakpoint(medium) {
+        position: absolute;
+        display: block;
+        transition: all 0.3s ease-out;
+    }
+
+    &--right {
+        right: -9.4rem;
+        top: 0;
+
+        @include u.breakpoint(large) {
+            right: -4.6rem;
+            top: 20.4rem;
+        }
+    }
+
+    &--left {
+        left: -22.4rem;
+        top: 0;
+
+        @include u.breakpoint(large) {
+            left: -10.1rem;
+            top: 4.7rem;
+        }
+    }
+}
+
+.hero__image-wrapper {
+    position: absolute;
+    top: -8rem;
+    padding: 1.9rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    transition: all 0.3s ease-out;
+
+    @include u.breakpoint(small) {
+        left: 50%;
+        transform: translateX(-50%);
+        grid-template-columns: repeat(4, 7.2rem);
+    }
+
+    @include u.breakpoint(medium) {
+        top: -10.4rem;
+        grid-template-columns: repeat(8, 6.4rem);
+        gap: 2.4rem;
+    }
+
+    @include u.breakpoint(large) {
+        top: -20.8rem;
+        grid-template-columns: repeat(12, 6.4rem);
+        gap: 3.2rem;
+    }
+}
+
+.hero__image {
+    grid-column: 1 / 5;
+
+    @include u.breakpoint(medium) {
+        grid-column: 2 / 8;
+    }
+
+    @include u.breakpoint(large) {
+        grid-column: 3 / 11;
+    }
+}

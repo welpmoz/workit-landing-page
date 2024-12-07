@@ -1,0 +1,17 @@
+@use '../global/typography' as t;
+
+.button {
+    outline: none;
+    border: none;
+    padding: 1rem 3.2rem;
+    @include t.text-preset-5();
+    background-color: var(--green);
+    border: 0.2rem solid var(--green);
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: var(--slate-900);
+    color: var(--green);
+}

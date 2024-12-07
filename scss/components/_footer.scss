@@ -1,0 +1,27 @@
+@use '../global/typography' as t;
+
+.footer {
+    padding: 8rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5.6rem;
+
+    &__social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2.8rem;
+    }
+
+    &__icon {
+        color: var(--slate-500);
+        transition: all 0.3s ease-out;
+    }
+
+    &__icon:hover {
+        cursor: pointer;
+        color: var(--slate-900);
+        transform: scale(1.5);
+    }
+}
