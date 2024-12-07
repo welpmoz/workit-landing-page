@@ -1,6 +1,6 @@
-# Frontend Mentor - Password generator app
+# Frontend Mentor - Workit landing page
 
-This is a solution to the [Password Generator App](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Workit Landing Page](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Welcome! 👋
 
@@ -13,7 +13,6 @@ Thanks for purchasing this premium Frontend Mentor coding challenge.
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -25,45 +24,29 @@ Thanks for purchasing this premium Frontend Mentor coding challenge.
 
 ## Overview
 
-### The challenge
-
-Your challenge is to build out this password generator app and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
-
-- Generate a password based on the selected inclusion options
-- Copy the generated password to the computer's clipboard
-- See a strength rating for their generated password
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-
 ### Screenshot
 
 ![](./solution.png)
 
 ### Links
 
-- Solution URL: [GitHub repository](https://github.com/welpmoz/password-generator-app).
-- Live Site URL: [Live site](https://welpmoz.github.io/password-generator-app/)
+- Solution URL: [GitHub repository](https://github.com/welpmoz/workit-landing-page).
+- Live Site URL: [Live site](https://welpmoz.github.io/workit-landing-page/)
 
 ## My process
 
 ### What I learn
 
-- Save some text in the clipboard.
-- Use ChatGPT for save time markuping with meaningful class names
-- Use ChatGPT for remember some css properties
-- I use [zxcvbn](https://www.npmjs.com/package/zxcvbn) library for estimate the strength password
+- Modularize my sass project
+- Couple sass and BEM architecture
 
 ### Built with
 
 - Semantic HTML5 markup
-- Vanilla Javascript
-- CSS variables
+- SASS
 - BEM methodology
 - Google Fonts
+- Figma
 - Git & GitHub
 - Mobile first approach
 
@@ -74,6 +57,7 @@ Your users should be able to:
 - [CSS examples](https://github.com/lsvekis/HTML-CSS-Exercises-Book): Simple but powerful examples that improve my CSS skills.
 - [w3schools](https://www.w3schools.com): Great resource that provide several examples of HTML, CSS & JavaScript.
 - [animation rocks](https://cssanimation.rocks/): Provide several innovative ideas for animate your project.
+- [Sass arquitecture](https://www.youtube.com/watch?v=LVXUTvJnFYQ): This video help me a lot to organize my sass code.
 
 ## Author
 
